@@ -6,7 +6,7 @@ class TextCell extends React.PureComponent {
   render() {
     const {data, rowIndex, columnKey, ...props} = this.props;
     return (
-      <Cell {...props}>
+      <Cell {...props} className={data[rowIndex][this.props.cn]}>
         {data[rowIndex][columnKey]}
       </Cell>
     );
@@ -76,13 +76,13 @@ class Datatable extends Component {
           <Column
             header={<Cell>Count</Cell>}
             columnKey="review_count4"
-            cell={<TextCell data={this.props.data} />}
+            cell={<TextCell data={this.props.data} cn="rcnote4" />}
             width={60}
           />
           <Column
             header={<Cell>Rating</Cell>}
             columnKey="overall_rating4"
-            cell={<TextCell data={this.props.data} />}
+            cell={<TextCell data={this.props.data} cn="ornote4" />}
             width={60}
           />
           <Column
@@ -97,13 +97,13 @@ class Datatable extends Component {
           <Column
             header={<Cell>Count</Cell>}
             columnKey="review_count3"
-            cell={<TextCell data={this.props.data} />}
+            cell={<TextCell data={this.props.data} cn="rcnote3" />}
             width={60}
           />
           <Column
             header={<Cell>Rating</Cell>}
             columnKey="overall_rating3"
-            cell={<TextCell data={this.props.data} />}
+            cell={<TextCell data={this.props.data} cn="ornote3" />}
             width={60}
           />
           <Column
@@ -118,13 +118,13 @@ class Datatable extends Component {
           <Column
             header={<Cell>Count</Cell>}
             columnKey="review_count2"
-            cell={<TextCell data={this.props.data} />}
+            cell={<TextCell data={this.props.data} cn="rcnote2" />}
             width={60}
           />
           <Column
             header={<Cell>Rating</Cell>}
             columnKey="overall_rating2"
-            cell={<TextCell data={this.props.data} />}
+            cell={<TextCell data={this.props.data} cn="ornote2" />}
             width={60}
           />
           <Column
@@ -139,13 +139,13 @@ class Datatable extends Component {
           <Column
             header={<Cell>Count</Cell>}
             columnKey="review_count"
-            cell={<TextCell data={this.props.data} />}
+            cell={<TextCell data={this.props.data} cn="rcnote" />}
             width={60}
           />
           <Column
             header={<Cell>Rating</Cell>}
             columnKey="overall_rating"
-            cell={<TextCell data={this.props.data} />}
+            cell={<TextCell data={this.props.data} cn="ornote" />}
             width={60}
           />
           <Column

@@ -22,8 +22,54 @@ class App extends Component {
     }))
     .then(function(values) {
       console.log(values);
+      let newVal = []
+      values.forEach(val => {
+        console.log(val);
+        if(val.review_count5 && val.review_count4){
+          if(val.review_count5 < val.review_count4){
+            val.rcnote4 = 'count_inc';
+          }
+          if(val.overall_rating5 < val.overall_rating4){
+            val.ornote4 = 'inc';
+          } else if(val.overall_rating5 > val.overall_rating4){
+            val.ornote4 = 'dec';
+          }
+        }
+        if(val.review_count4 && val.review_count3){
+          if(val.review_count4 < val.review_count3){
+            val.rcnote3 = 'count_inc';
+          }
+          if(val.overall_rating4 < val.overall_rating3){
+            val.ornote3 = 'inc';
+          } else if(val.overall_rating4 > val.overall_rating3){
+            val.ornote3 = 'dec';
+          }
+        }
+        if(val.review_count3 && val.review_count2){
+          if(val.review_count3 < val.review_count2){
+            val.rcnote2 = 'count_inc';
+          }
+          if(val.overall_rating3 < val.overall_rating2){
+            val.ornote2 = 'inc';
+          } else if(val.overall_rating3 > val.overall_rating2){
+            val.ornote2 = 'dec';
+          }
+        }
+        if(val.review_count2 && val.review_count){
+          if(val.review_count2 < val.review_count){
+            val.rcnote = 'count_inc';
+          }
+          if(val.overall_rating2 < val.overall_rating){
+            val.ornote = 'inc';
+          } else if(val.overall_rating2 > val.overall_rating){
+            val.ornote = 'dec';
+          }
+        }
+        newVal.push(val);
+      });
+      console.log(newVal);
       that.setState({
-        data: values
+        data: newVal
       });
     });
   }

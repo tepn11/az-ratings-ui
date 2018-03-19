@@ -47,3 +47,15 @@
   color: #9ea2a5;
   padding-bottom: 5px;
 }
+
+.count_inc {
+  background-color:#fdf696;
+}
+
+.inc {
+  background-color:#b1f9e8;
+}
+
+.dec {
+  background-color:#f9b3ce;
+}
