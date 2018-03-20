@@ -26,18 +26,18 @@ class Datatable extends Component {
         rowHeight={50}
         groupHeaderHeight={30}
         rowsCount={this.props.data.length}
-        width={1800}
+        width={1500}
         height={5000}
         overflowX={'auto'}
         headerHeight={70}>
         <ColumnGroup
           header={<Cell>Details</Cell>}>
-          <Column
+          {/* <Column
             header={<Cell>Url</Cell>}
             columnKey="url"
             cell={<TextCell data={this.props.data} />}
-            width={300}
-          />
+            width={250}
+          /> */}
           <Column
             header={<Cell>Name</Cell>}
             columnKey="name"
