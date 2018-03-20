@@ -26,8 +26,9 @@ class Datatable extends Component {
         rowHeight={50}
         groupHeaderHeight={30}
         rowsCount={this.props.data.length}
-        width={1300}
+        width={1800}
         height={5000}
+        overflowX={'auto'}
         headerHeight={70}>
         <ColumnGroup
           header={<Cell>Details</Cell>}>
